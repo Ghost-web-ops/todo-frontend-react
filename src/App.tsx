@@ -22,7 +22,7 @@ const TrashIcon: FC = () => (
 function App() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [newTask, setNewTask] = useState('');
-  const apiUrl = 'http://localhost:3000/todos';
+ const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
   // جلب البيانات عند تحميل الصفحة
   useEffect(() => {
